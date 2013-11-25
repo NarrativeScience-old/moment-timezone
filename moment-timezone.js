@@ -524,5 +524,7 @@
 		onload(window.moment);
 	} else if (typeof module !== 'undefined') {
 		module.exports = onload(require('moment'));
+	} else if (typeof self !== 'undefined' && self.moment) {
+		onload(self.moment);
 	}
 }).apply(this);
